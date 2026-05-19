@@ -10,6 +10,8 @@ CORS_ORIGINS = [origin.strip() for origin in os.getenv("CORS_ORIGINS", "").split
 
 if APP_ENV != "production" and not CORS_ORIGINS:
     CORS_ORIGINS = [
+        "https://avisclient.netlify.app/admin",
+        "https://avisclient.netlify.app/index"
         "http://127.0.0.1:5501",
         "http://localhost:5500",
         "http://127.0.0.1:3000",
